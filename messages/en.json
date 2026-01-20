@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "role": "Backend Developer",
+    "name": "Jose Daniel Tistoj Reyes",
+    "location": "Quetzaltenango, Guatemala",
+    "summary": "Backend developer focused on scalable systems.",
+    "profilePlaceholder": "Profile photo"
+  },
+  "links": {
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "sections": {
+    "about": "About me",
+    "skills": "Skills stack",
+    "projects": "Personal projects",
+    "experience": "Experience & education",
+    "contact": "Contact",
+    "downloadCv": "Download CV"
+  },
+  "projects": {
+    "links": {
+      "production": "Production app",
+      "frontend": "Frontend (public repo)"
+    },
+    "sections": {
+      "highlights": "Highlights",
+      "features": "Includes"
+    },
+    "items": [
+      {
+        "title": "Nexum Personal Finance — Frontend",
+        "description": "Frontend for a personal finance management app (accounts, categories, transactions, transfers, and monthly budgets), built with Next.js (App Router), TypeScript, Tailwind CSS, and shadcn/ui.",
+        "production": "https://www.nexumpersonalfinance.com/login",
+        "frontend": "https://github.com/Nexum-Projects/personal-finance-frontend",
+        "backend": "Private backend built with Spring Boot.",
+        "stack": "Stack: Next.js, TypeScript, Tailwind CSS, shadcn/ui, Recharts, i18n",
+        "highlights": [
+          "Dynamic timezone handling.",
+          "Configurable currency.",
+          "i18n / multi-language.",
+          "Well-structured state management designed for scale."
+        ],
+        "features": [
+          "Authentication (login/register), email confirmation, and password recovery.",
+          "Dashboard with charts (Recharts) and analytics by period/budget.",
+          "User preferences (currency, timezone, ES/EN/PT language).",
+          "UI i18n (progressively applied in key modules).",
+          "In-app user documentation inside the dashboard.",
+          "Backend includes email verification, password recovery, and Resend email delivery."
+        ]
+      }
+    ]
+  },
+  "about": {
+    "body": "Backend developer with 2+ years of professional experience designing scalable systems, REST APIs, and microservice architectures. Strong background in Java, TypeScript, and PostgreSQL, with a focus on continuous learning and delivering reliable solutions."
+  },
+  "skills": {
+    "groups": [
+      {
+        "title": "Languages",
+        "items": ["TypeScript", "Java", "SQL"]
+      },
+      {
+        "title": "Frameworks & Platforms",
+        "items": ["Node.js", "NestJS", "Spring Boot", "Quarkus"]
+      },
+      {
+        "title": "Data & ORM",
+        "items": ["PostgreSQL", "Supabase", "Prisma"]
+      },
+      {
+        "title": "Tools & Practices",
+        "items": ["Docker (basic)", "GitHub", "Swagger/OpenAPI", "Resend"]
+      }
+    ]
+  },
+  "experience": {
+    "companyLink": "View company on LinkedIn",
+    "items": [
+      {
+        "role": "Backend Developer",
+        "company": "Tinbrew",
+        "companyUrl": "https://www.linkedin.com/company/tinbrew/",
+        "project": "Boba Tea — POS system",
+        "period": "2025 – 2026",
+        "location": "Quetzaltenango, Guatemala (Remote / On-site)",
+        "stack": "Stack: TypeScript, Supabase, PostgreSQL, Hexagonal Architecture",
+        "bullets": [
+          "Built the backend for a multi-branch point-of-sale system.",
+          "Implemented ingredient and supplies inventory control to reduce waste.",
+          "Automated cash register closing and daily financial reports.",
+          "Hexagonal architecture and a reusable core package.",
+          "Enabled offline-first mobile support using WatermelonDB + Supabase."
+        ]
+      },
+      {
+        "role": "Backend Developer",
+        "company": "Tinbrew",
+        "companyUrl": "https://www.linkedin.com/company/tinbrew/",
+        "project": "Boba Tea — Warehouse & internal e-commerce",
+        "period": "2024 – 2025",
+        "location": "Quetzaltenango, Guatemala (Remote / On-site)",
+        "stack": "Stack: TypeScript, Supabase, PostgreSQL, Prisma",
+        "bullets": [
+          "Delivered the backend for an internal e-commerce platform for franchisees.",
+          "Implemented multi-stage order flows with approvals.",
+          "Managed employees, products, purchases, and internal sales.",
+          "Defined roles and permissions with Row Level Security (RLS).",
+          "Integrated purchasing, inventory adjustments, and product flows."
+        ]
+      },
+      {
+        "role": "Backend Developer",
+        "company": "Tinbrew",
+        "companyUrl": "https://www.linkedin.com/company/tinbrew/",
+        "project": "Xelamovil — Business management system",
+        "period": "2023 – 2024",
+        "location": "Quetzaltenango, Guatemala (Remote / On-site)",
+        "stack": "Stack: TypeScript, NestJS, PostgreSQL, Infile API",
+        "bullets": [
+          "Developed REST APIs for sales, purchasing, inventory, and transfers.",
+          "Integrated electronic invoicing (Infile) compliant with local tax rules.",
+          "Added business validations to prevent stock and finance inconsistencies."
+        ]
+      },
+      {
+        "role": "Backend Developer",
+        "company": "Tinbrew",
+        "companyUrl": "https://www.linkedin.com/company/tinbrew/",
+        "project": "Health platform",
+        "period": "2023 – 2024",
+        "location": "Guatemala (Remote)",
+        "stack": "Stack: Java, Quarkus, PostgreSQL, Microservices, Stripe, Resend",
+        "bullets": [
+          "Built microservices for authentication, medical directory, payments, and notifications.",
+          "Integrated Stripe for payments and Resend for transactional emails.",
+          "Collaborated on architecture decisions for scalability and maintainability."
+        ]
+      }
+    ],
+    "education": {
+      "title": "Education",
+      "degree": "BSc in Computer Science and Systems Engineering",
+      "institution": "Universidad Rafael Landívar",
+      "period": "2017 – 2024",
+      "status": "Graduated"
+    },
+    "languages": {
+      "title": "Languages",
+      "items": [
+        { "label": "Spanish", "level": "Native" },
+        { "label": "English", "level": "Basic (improving)" }
+      ]
+    }
+  },
+  "contactForm": {
+    "title": "Contact",
+    "subtitle": "Write to me and I will reply as soon as possible.",
+    "fields": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Your full name",
+      "email": "email@domain.com",
+      "phone": "(XX) XXXX-XXXX",
+      "message": "Tell me about your project or opportunity"
+    },
+    "actions": {
+      "submit": "Send"
+    }
+  },
+  "cv": {
+    "description": "Download a PDF copy of my resume.",
+    "action": "Download CV",
+    "note": ""
+  }
+}
