@@ -79,6 +79,9 @@ export default async function HomePage({
               <a className="transition hover:text-white" href="#experience">
                 {t("sections.experience")}
               </a>
+              <a className="transition hover:text-white" href="#github-stats">
+                {t("sections.githubStats")}
+              </a>
               <a className="transition hover:text-white" href="#contact">
                 {t("sections.contact")}
               </a>
@@ -315,6 +318,22 @@ export default async function HomePage({
                 ))}
               </ul>
             </div>
+          </div>
+        </section>
+
+        <section id="github-stats" className="space-y-8">
+          <h2 className="text-2xl font-semibold">{t("sections.githubStats")}</h2>
+          <div className="flex flex-col items-center gap-4 md:flex-row md:justify-center">
+            <img
+              src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=danieltistoj&theme=dark&hide_border=true"
+              alt="GitHub repos per language"
+              className="w-full max-w-md"
+            />
+            <img
+              src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=danieltistoj&theme=dark&hide_border=true"
+              alt="GitHub most commit language"
+              className="w-full max-w-md"
+            />
           </div>
         </section>
 
