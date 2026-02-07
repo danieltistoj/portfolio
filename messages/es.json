@@ -2,7 +2,7 @@
   "hero": {
     "role": "Desarrollador Backend",
     "name": "Jose Daniel Tistoj Reyes",
-    "location": "Quetzaltenango, Guatemala",
+    "location": "Guatemala",
     "summary": "Desarrollador backend enfocado en sistemas escalables.",
     "profilePlaceholder": "Foto de perfil"
   },
@@ -17,8 +17,7 @@
     "projects": "Proyectos personales",
     "experience": "Experiencia y educación",
     "githubStats": "Estadísticas de GitHub",
-    "contact": "Contacto",
-    "downloadCv": "Descargar CV"
+    "contact": "Contacto"
   },
   "projects": {
     "links": {
@@ -174,10 +173,5 @@
     "actions": {
       "submit": "Enviar"
     }
-  },
-  "cv": {
-    "description": "Descarga una copia en PDF de mi CV.",
-    "action": "Descargar CV",
-    "note": ""
   }
 }

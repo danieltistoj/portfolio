@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { getTranslations } from "next-intl/server";
-import { Download, Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 
 import { LanguageSwitcher } from "../../components/LanguageSwitcher";
 import { Button } from "../../components/ui/button";
@@ -54,7 +53,6 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale });
-  const cvNote = t("cv.note");
   const skills = t.raw("skills.groups") as SkillGroup[];
   const projects = t.raw("projects.items") as ProjectItem[];
   const experiences = t.raw("experience.items") as ExperienceItem[];
@@ -337,7 +335,7 @@ export default async function HomePage({
           </div>
         </section>
 
-        <section id="contact" className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+        <section id="contact" className="space-y-6">
           <div className="space-y-6 rounded-3xl border border-white/10 bg-white/5 p-6">
             <div className="space-y-2">
               <h3 className="text-xl font-semibold text-white">
@@ -399,23 +397,6 @@ export default async function HomePage({
               </div>
               <Button type="submit">{t("contactForm.actions.submit")}</Button>
             </form>
-          </div>
-          <div className="space-y-6 rounded-3xl border border-white/10 bg-white/5 p-6">
-            <div className="space-y-2">
-              <h3 className="text-xl font-semibold text-white">
-                {t("sections.downloadCv")}
-              </h3>
-              <p className="text-sm text-white/60">{t("cv.description")}</p>
-            </div>
-            <Button asChild>
-              <Link href="/cv/jose-daniel-tistoj-reyes-cv.pdf" download>
-                <Download className="h-4 w-4" />
-                {t("cv.action")}
-              </Link>
-            </Button>
-            {cvNote ? (
-              <p className="text-xs text-white/40">{cvNote}</p>
-            ) : null}
           </div>
         </section>
       </main>
