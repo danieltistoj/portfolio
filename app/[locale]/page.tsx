@@ -268,7 +268,6 @@ export default async function HomePage({
                     {item.company} — {item.project}
                   </h3>
                   <p className="text-sm text-white/60">{item.period}</p>
-                  <p className="text-sm text-white/60">{item.location}</p>
                 </div>
                 {item.companyUrl ? (
                   <div className="mt-4">
@@ -299,8 +298,6 @@ export default async function HomePage({
               </h3>
               <div className="mt-4 space-y-2 text-sm text-white/70">
                 <p>{education.degree}</p>
-                <p>{education.institution}</p>
-                <p>{education.period}</p>
                 <p>{education.status}</p>
               </div>
             </div>
