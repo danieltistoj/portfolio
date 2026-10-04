@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Análisis SonarQube y Quality Gate para el frontend (sin tests: no hay cobertura).
+# Tests (Vitest, con cobertura), análisis SonarQube y Quality Gate para el frontend.
 # Requiere en el entorno: SONAR_HOST_URL y SONAR_TOKEN (el token nunca se guarda en el repo).
 set -euo pipefail
 
@@ -29,6 +29,9 @@ if ! curl -s -u "$SONAR_TOKEN:" "$SONAR_HOST_URL/api/projects/search?projects=$P
     --data-urlencode "mainBranch=main" \
     --data-urlencode "visibility=private" > /dev/null
 fi
+
+echo "==> Tests y cobertura (Vitest)..."
+npm run test:run
 
 echo "==> Análisis SonarQube (npx @sonar/scan)..."
 npx -y @sonar/scan \

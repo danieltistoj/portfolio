@@ -11,3 +11,15 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
   quedan fuera de git.
 - `sonar-project.properties` y `scripts/sonar-scan.sh`: análisis SonarQube y Quality Gate contra un SonarQube
   local, integrados en `/portfolio-checks`.
+- Tests con Vitest y Testing Library para `lib/utils.ts`, `components/ContactForm.tsx` y
+  `components/LanguageSwitcher.tsx` (`npm test`, `npm run test:run`), con cobertura reportada a SonarQube.
+
+### Changed
+
+- Todas las dependencias de `package.json` fijadas a una versión exacta; ninguna queda en `latest`. Cierra
+  G-03 en `docs/gaps/README.md`.
+
+### Fixed
+
+- Imágenes de estadísticas de GitHub cargadas por `http://` en vez de `https://`, lo que generaba contenido
+  mixto en producción. Cierra [#2](https://github.com/danieltistoj/portfolio/issues/2).

@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Reportes generados por vitest/sonar-scanner, no código del proyecto:
+    "coverage/**",
+    ".scannerwork/**",
   ]),
 ]);
 
