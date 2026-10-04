@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+### Solo para el desarrollo local de cada persona ###
+# Bitácora de sesiones (handoff): ver INICIO.md
+handoff/
+# Grafo del código: se genera en local con `graphify update .`
+graphify-out/
