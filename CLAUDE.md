@@ -29,6 +29,8 @@ npm run dev          # http://localhost:3000
 npm run lint         # ESLint (eslint-config-next)
 npx tsc --noEmit     # tipos
 npm run build        # build de producción
+npm run test         # Vitest en modo watch
+npm run test:run     # Vitest una vez, con cobertura (coverage/, no versionado)
 ./scripts/sonar-scan.sh   # SonarQube + Quality Gate (SONAR_HOST_URL y SONAR_TOKEN del entorno)
 graphify update .    # actualizar el grafo local (graphify-out/, no versionado)
 ```
@@ -37,6 +39,15 @@ graphify update .    # actualizar el grafo local (graphify-out/, no versionado)
 
 - **Texto en `messages/`:** nada de texto visible en duro en los componentes. Una clave nueva va en los tres
   idiomas en el mismo cambio.
+- **Dependencias fijadas, nunca `latest`:** cada paquete en `package.json` va con una versión exacta. `npm
+  install` no debe mover ninguna por sí solo; si hace falta subir una, es un cambio explícito y su propio
+  commit. (Antes se usaba `latest`: un `npm install` de rutina llegó a subir `lucide-react` de major y rompió
+  el build — ver `docs/gaps/README.md`, G-03 cerrado.)
+- **Tests con Vitest + Testing Library:** un test por componente o módulo con lógica propia
+  (`components/*.tsx`, `lib/*.ts`); los wrappers finos de Next/next-intl y la composición de página
+  (`app/[locale]/*.tsx`, `middleware.ts`, `i18n/navigation.ts`, `i18n/request.ts`) quedan fuera del umbral de
+  cobertura (`sonar.coverage.exclusions` en `sonar-project.properties`) porque no tienen lógica que probar en
+  aislamiento.
 - **Cambio mínimo:** sin abstracciones de un solo uso, sin dependencias nuevas para lo que resuelven unas líneas
   o la plataforma (CSS, HTML nativo).
 - **Datos personales:** solo los que ya son públicos en el sitio. Nunca secretos ni `.env` en el repositorio.

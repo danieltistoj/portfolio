@@ -1,7 +1,7 @@
 # Inicio de sesión — portfolio
 
-**Versión:** `v1.0`
-**Fecha:** 2026-10-03
+**Versión:** `v1.1`
+**Fecha:** 2026-10-04
 
 Pasos para retomar el trabajo en el portafolio. En Claude Code, la skill `/inicio-portfolio` los ejecuta. Las
 reglas del proyecto están en [`CLAUDE.md`](CLAUDE.md).
@@ -38,6 +38,7 @@ Para preguntas de estructura: `graphify query "<pregunta>"`. Después de cambiar
 |---|---|
 | Lint | `npm run lint` |
 | Tipos | `npx tsc --noEmit` |
+| Tests + cobertura | `npm run test:run` (genera `coverage/` y `test-results.xml`, no versionados) |
 | Build | `npm run build` |
 | SonarQube | `./scripts/sonar-scan.sh` (requiere `SONAR_HOST_URL` y `SONAR_TOKEN` exportados) |
 | Grafo | `graphify update .` |
@@ -60,4 +61,5 @@ BLOCKED; no se afirma PASS de lo que no se ejecutó.
 
 | Versión | Fecha | Cambio |
 |---|---|---|
+| `v1.1` | 2026-10-04 | Agregado paso de tests (`npm run test:run`) antes de SonarQube |
 | `v1.0` | 2026-10-03 | Versión inicial |

@@ -46,3 +46,5 @@ handoff/
 # Grafo del código: se genera en local con `graphify update .`
 graphify-out/
 .scannerwork/
+coverage/
+test-results.xml
