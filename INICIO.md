@@ -39,10 +39,15 @@ Para preguntas de estructura: `graphify query "<pregunta>"`. Después de cambiar
 | Lint | `npm run lint` |
 | Tipos | `npx tsc --noEmit` |
 | Build | `npm run build` |
+| SonarQube | `./scripts/sonar-scan.sh` (requiere `SONAR_HOST_URL` y `SONAR_TOKEN` exportados) |
 | Grafo | `graphify update .` |
 
 En Claude Code, la skill `/portfolio-checks` ejecuta estos pasos. Reportar cada uno como PASS, FAIL, NOT RUN o
 BLOCKED; no se afirma PASS de lo que no se ejecutó.
+
+- El token de Sonar se exporta en la sesión (`export SONAR_TOKEN=...`) y nunca se guarda en el repositorio.
+  Antes de reportar Sonar como bloqueado, comprobar el token con
+  `curl -s -u "$SONAR_TOKEN:" "$SONAR_HOST_URL/api/authentication/validate"`.
 
 ## 5. Documentación que acompaña cada cambio
 

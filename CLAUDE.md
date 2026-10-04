@@ -29,6 +29,7 @@ npm run dev          # http://localhost:3000
 npm run lint         # ESLint (eslint-config-next)
 npx tsc --noEmit     # tipos
 npm run build        # build de producción
+./scripts/sonar-scan.sh   # SonarQube + Quality Gate (SONAR_HOST_URL y SONAR_TOKEN del entorno)
 graphify update .    # actualizar el grafo local (graphify-out/, no versionado)
 ```
 
