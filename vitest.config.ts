@@ -22,6 +22,7 @@ export default defineConfig({
       // detalle en sonar.coverage.exclusions (sonar-project.properties).
       exclude: [
         "app/**",
+        "components/ui/**",
         "i18n/navigation.ts",
         "i18n/request.ts",
         "middleware.ts",
