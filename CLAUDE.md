@@ -12,7 +12,7 @@ traducciones en `en` (por defecto), `es` y `pt` vía `next-intl`. Remoto: `githu
 | Ruta | Contenido |
 |---|---|
 | `app/[locale]/` | `layout.tsx`, `page.tsx` (todas las secciones), `not-found.tsx` |
-| `components/` | `LanguageSwitcher`, `ContactForm`; `ui/` con primitivas estilo shadcn (Radix + CVA) |
+| `components/` | `LanguageSwitcher`; `ui/` con primitivas estilo shadcn (Radix + CVA) |
 | `i18n/` | `config.ts` (locales, `routing` con `localePrefix: "as-needed"`), `request.ts`, `navigation.ts` |
 | `messages/` | `en.json`, `es.json`, `pt.json`: todo el texto visible |
 | `middleware.ts` | Middleware de `next-intl` |
@@ -44,10 +44,12 @@ graphify update .    # actualizar el grafo local (graphify-out/, no versionado)
   commit. (Antes se usaba `latest`: un `npm install` de rutina llegó a subir `lucide-react` de major y rompió
   el build — ver `docs/gaps/README.md`, G-03 cerrado.)
 - **Tests con Vitest + Testing Library:** un test por componente o módulo con lógica propia
-  (`components/*.tsx`, `lib/*.ts`); los wrappers finos de Next/next-intl y la composición de página
-  (`app/[locale]/*.tsx`, `middleware.ts`, `i18n/navigation.ts`, `i18n/request.ts`) quedan fuera del umbral de
-  cobertura (`sonar.coverage.exclusions` en `sonar-project.properties`) porque no tienen lógica que probar en
-  aislamiento.
+  (`components/*.tsx`, `lib/*.ts`); los wrappers finos de Next/next-intl, la composición de página
+  (`app/[locale]/*.tsx`, `middleware.ts`, `i18n/navigation.ts`, `i18n/request.ts`) y las primitivas de
+  `components/ui/` (estilo shadcn/ui, sin lógica propia) quedan fuera del umbral de cobertura
+  (`sonar.coverage.exclusions` en `sonar-project.properties`) porque no tienen lógica que probar en aislamiento.
+- **Sin código sin usar:** un componente o dependencia que nada importa no se deja "por si acaso" — se borra en
+  el mismo cambio que lo deja sin uso (ver `docs/gaps/README.md`, G-01 cerrado).
 - **Cambio mínimo:** sin abstracciones de un solo uso, sin dependencias nuevas para lo que resuelven unas líneas
   o la plataforma (CSS, HTML nativo).
 - **Datos personales:** solo los que ya son públicos en el sitio. Nunca secretos ni `.env` en el repositorio.
