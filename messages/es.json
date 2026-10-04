@@ -3,8 +3,7 @@
     "role": "Desarrollador Backend",
     "name": "Danie Tistoj",
     "location": "Guatemala",
-    "summary": "Desarrollador backend enfocado en sistemas escalables.",
-    "profilePlaceholder": "Foto de perfil"
+    "summary": "Desarrollador backend enfocado en sistemas escalables."
   },
   "links": {
     "email": "Correo",
@@ -54,7 +53,7 @@
     ]
   },
   "about": {
-    "body": "Desarrollador backend con más de 2 años de experiencia profesional en el diseño de sistemas escalables, APIs REST y arquitecturas de microservicios. Sólida experiencia en Java, TypeScript y PostgreSQL, con enfoque en aprendizaje continuo y entrega confiable de soluciones."
+    "body": "Desarrollador backend con más de 3 años de experiencia profesional en el diseño de sistemas escalables, APIs REST y arquitecturas de microservicios. Sólida experiencia en Java, TypeScript y PostgreSQL, con enfoque en aprendizaje continuo y entrega confiable de soluciones."
   },
   "skills": {
     "groups": [
